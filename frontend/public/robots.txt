@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chatapp-pranav.vercel.app/sitemap.xml
