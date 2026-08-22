@@ -26,23 +26,52 @@
     <meta name="twitter:title" content="ChatApp — Real-time MERN Chat with JWT & Socket.io" />
     <meta name="twitter:description" content="Real-time full-stack chat with JWT auth, Socket.io messaging, conversations, and online status. Open-source MERN reference project." />
 
-    <!-- Structured data (SoftwareApplication — factual, no fabricated ratings) -->
+    <!-- Structured data: Organization + WebSite + SoftwareApplication (factual only, no fabricated ratings) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "ChatApp",
-      "applicationCategory": "CommunicationApplication",
-      "operatingSystem": "Web",
-      "description": "Real-time full-stack chat application with JWT authentication, Socket.io messaging, conversations, and online status.",
-      "url": "https://chatapp-pranav.vercel.app/",
-      "author": {
-        "@type": "Person",
-        "name": "Pranav Gawas",
-        "url": "https://github.com/pranavgawasproject"
-      },
-      "license": "https://opensource.org/licenses/MIT",
-      "codeRepository": "https://github.com/pranavgawasproject/ChatApp"
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://chatapp-pranav.vercel.app/#organization",
+          "name": "ChatApp",
+          "url": "https://chatapp-pranav.vercel.app/",
+          "logo": "https://chatapp-pranav.vercel.app/vite.svg",
+          "sameAs": [
+            "https://github.com/pranavgawasproject/ChatApp"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://chatapp-pranav.vercel.app/#website",
+          "url": "https://chatapp-pranav.vercel.app/",
+          "name": "ChatApp",
+          "description": "Real-time full-stack chat application with JWT authentication, Socket.io messaging, conversations, and online status.",
+          "publisher": {
+            "@id": "https://chatapp-pranav.vercel.app/#organization"
+          },
+          "inLanguage": "en"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://chatapp-pranav.vercel.app/#app",
+          "name": "ChatApp",
+          "applicationCategory": "CommunicationApplication",
+          "operatingSystem": "Web",
+          "description": "Real-time full-stack chat application with JWT authentication, Socket.io messaging, conversations, and online status.",
+          "url": "https://chatapp-pranav.vercel.app/",
+          "author": {
+            "@type": "Person",
+            "name": "Pranav Gawas",
+            "url": "https://github.com/pranavgawasproject"
+          },
+          "license": "https://opensource.org/licenses/MIT",
+          "codeRepository": "https://github.com/pranavgawasproject/ChatApp",
+          "publisher": {
+            "@id": "https://chatapp-pranav.vercel.app/#organization"
+          }
+        }
+      ]
     }
     </script>
   </head>
